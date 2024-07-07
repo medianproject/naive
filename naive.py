@@ -1,9 +1,10 @@
-# ALTER CODE
-#  Aufgabe ist binary search see https://robbell.io/2009/06/a-beginners-guide-to-big-o-notation
+# Alter code zum testen
 import numpy as np
 import streamlit as st
+
 # title
 st.title("Median Calculator", anchor=False)
+
 # uer entry
 userEntry=st.sidebar.number_input("Select random iterations (min=1, max=10)", min_value=1, max_value=20,value=5, step=1)
 
@@ -34,7 +35,4 @@ medianList=[round(float(i),2) for i in medianList]
 st.write(f"Random numbers unsorted: {numberList}")
 st.write(f"Random numbers sorted: {numberListSort}")
 st.write(f"Median values: {medianList}")
-st.line_chart(medianList, x_label="Iterations", y_label="Median values")
-
-# which python3 --- um pfad zu bekommen von python
-# % jupyter kernelspec list --- um jupyter zu sehen 
+st.line_chart(medianList, x_label="Iterations", y_label="Median values") 
